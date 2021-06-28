@@ -1,0 +1,10 @@
+## Build
+*.pyc
+build/
+*.egg-info/
+dist/
+
+## Tests / coverage
+nosetests.xml
+reports/
+.coverage
