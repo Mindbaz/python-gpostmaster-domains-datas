@@ -28,7 +28,7 @@ setup (
     description = 'Downloads and flattends datas from Google Postmaster Tools (GPT)',
     long_description = long_description,
     long_description_content_type = 'text/markdown',
-    url = 'https://github.com/Mindbaz/google-postmaster-tools',
+    url = 'https://github.com/Mindbaz/python-google-postmaster-datas',
     author = 'Valentin Henon',
     author_email = 'vhenon@mindbaz.com',
     python_requires = '>=3.6',
