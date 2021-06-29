@@ -54,5 +54,11 @@ setup (
             'gpt_dl_domain_datas = entry_points_googlepostmasterapi.gpt_dl_domain_datas:run'
         ]
     },
-    zip_safe = False
+    zip_safe = False,
+    classifiers = [
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9"
+    ],
 );

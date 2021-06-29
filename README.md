@@ -68,3 +68,7 @@ Translates string level from GTP to int
                          Default : D-2
       --verbose          Verbose mode
       --version          Display version
+
+# Support
+
+Python : >=3.6
