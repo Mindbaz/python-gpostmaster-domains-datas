@@ -23,12 +23,12 @@ with open ( os.path.join ( os.path.dirname ( os.path.abspath ( __file__ ) ), 'RE
 from googlepostmasterapi import __version__;
 
 setup (
-    name = 'google-postmaster-datas',
+    name = 'gpostmaster-domains-datas',
     version = __version__,
     description = 'Downloads and flattends datas from Google Postmaster Tools (GPT)',
     long_description = long_description,
     long_description_content_type = 'text/markdown',
-    url = 'https://github.com/Mindbaz/python-google-postmaster-datas',
+    url = 'https://github.com/Mindbaz/python-gpostmaster-domains-datas',
     author = 'Valentin Henon',
     author_email = 'vhenon@mindbaz.com',
     python_requires = '>=3.6',

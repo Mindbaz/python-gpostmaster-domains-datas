@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Google Postmaster Datas'
+project = 'Google Postmaster Domains Datas'
 copyright = '2021, Mindbaz'
 author = 'vhenon@mindbaz.com'
 

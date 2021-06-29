@@ -1,9 +1,9 @@
-.. Google Postmaster Datas documentation master file, created by
+.. Google Postmaster Domains Datas documentation master file, created by
    sphinx-quickstart on Tue Jun 29 10:09:48 2021.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Google Postmaster Datas
+Google Postmaster Domains Datas
 ===================================================
 
 .. automodule:: googlepostmasterapi.gpt

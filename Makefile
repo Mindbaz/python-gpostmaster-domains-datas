@@ -40,7 +40,7 @@ compile:
 .PHONY: docs
 docs:
 	@$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)
-	@cp -r $(ROOT_DIR)/$(BUILDDIR)/html/* $(ROOT_DIR)/docs/
+	@cp -rv $(ROOT_DIR)/$(BUILDDIR)/html/* $(ROOT_DIR)/docs/
 
 deploy: compile clean
 

@@ -53,7 +53,3 @@ python entry_points_googlepostmasterapi/gpt_dl_domain_datas.py -h
 # Support version
 
 Python : `>=3.6`
-
-# Doc
-
-Documentation available here : https://mindbaz.github.io/python-google-postmaster-datas/docs/html/
