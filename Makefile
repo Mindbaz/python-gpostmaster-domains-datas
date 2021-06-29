@@ -5,8 +5,8 @@ PARENT_DIR:=$(shell dirname ${ROOT_DIR})
 TEST_FILES:=$(shell find ./tests/ -iname "*Test.py" | tr '\n' ',' | sed -e 's/,$$//g')
 SPHINXOPTS?=
 SPHINXBUILD?=sphinx-build
-SOURCEDIR=docs/
-BUILDDIR=docs/
+SOURCEDIR=source
+BUILDDIR=build
 PYTHON=python
 TWINE=twine
 
@@ -40,6 +40,7 @@ compile:
 .PHONY: docs
 docs:
 	@$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)
+	@cp -r $(ROOT_DIR)/$(BUILDDIR)/html/* $(ROOT_DIR)/docs/
 
 deploy: compile clean
 
