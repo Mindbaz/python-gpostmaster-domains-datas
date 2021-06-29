@@ -17,12 +17,14 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Google Postmaster Tools'
+project = 'Google Postmaster Datas'
 copyright = '2021, Mindbaz'
 author = 'vhenon@mindbaz.com'
 
+from googlepostmasterapi import __version__;
+
 # The full version, including alpha/beta/rc tags
-release = '0.0.3'
+release = __version__
 
 
 # -- General configuration ---------------------------------------------------
