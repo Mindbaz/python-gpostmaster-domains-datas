@@ -23,7 +23,7 @@ with open ( os.path.join ( os.path.dirname ( os.path.abspath ( __file__ ) ), 'RE
 from googlepostmasterapi import __version__;
 
 setup (
-    name = 'google-postmaster-tools',
+    name = 'google-postmaster-datas',
     version = __version__,
     description = 'Downloads and flattends datas from Google Postmaster Tools (GPT)',
     long_description = long_description,
