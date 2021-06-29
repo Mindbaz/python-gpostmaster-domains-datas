@@ -3,24 +3,28 @@ ROOT_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 ROOT_NAME:=$(shell basename ${ROOT_DIR})
 PARENT_DIR:=$(shell dirname ${ROOT_DIR})
 TEST_FILES:=$(shell find ./tests/ -iname "*Test.py" | tr '\n' ',' | sed -e 's/,$$//g')
+SPHINXOPTS?=
+SPHINXBUILD?=sphinx-build
+SOURCEDIR=docs/
+BUILDDIR=docs/
 PYTHON=python
 
 all: run
 
 run:
 
-test: run-tests run-coverage
+test: tests coverage
 
-run-coverage:
+coverage:
 	nosetests --with-coverage --cover-package="${PY_PACKAGE}" --cover-html --cover-html-dir="reports" --tests "${TEST_FILES}"
 
-run-tests:
+tests:
 	nosetests --with-xunit --xunit-file="nosetests.xml" --tests "${TEST_FILES}"
 
-run-syntax-check-python:
+syntax-check-python:
 	@python -m py_compile $(shell find ./ -not \( -path ./tests -prune \) -iname "*.py" ! -iname "__init__.py" -type f)
 
-run-syntax-check: run-syntax-check-python
+syntax-check: syntax-check-python
 
 valid-full-coverage: ; $(eval PERCENT_COVERAGE=$(shell nosetests --with-coverage --cover-package="${PY_PACKAGE}" --cover-html --cover-html-dir="reports" --tests "${TEST_FILES}" 2>&1 | grep -E "^TOTAL" | awk '{ print $$4 }'))
 	@if [ "$(PERCENT_COVERAGE)" != "100%" ]; then false; fi
@@ -28,6 +32,10 @@ valid-full-coverage: ; $(eval PERCENT_COVERAGE=$(shell nosetests --with-coverage
 compile:
 	## To use it : make target=<TARGET> deploy
 	python setup.py sdist upload -r $(target)
+
+.PHONY: docs
+docs:
+	@$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)
 
 deploy: compile clean
 

@@ -23,7 +23,7 @@ class FlatDatas ( object ):
     Attributes:
         datas (dict): Datas cleaned
         _datas_tpl (dict): Template to clean datas
-        dict_reputation (dict): Assoc to translate reputation to FR
+        dict_reputation (dict): Assoc to translate EN reputation to int
     """
     def __init__ ( self ):
         """Default constructor
@@ -41,10 +41,10 @@ class FlatDatas ( object ):
             'delivery_errors': []
         };
         
-        """Datas cleaned to all domains"""
+        """Datas cleaned"""
         self.datas = {};
         
-        """Assoc to translate reputation to FR"""
+        ## Assoc to translate EN reputation to int
         self.dict_reputation = {
             'high': 4, # i.e. : Bonne
             'medium': 3, # i.e. : Moyenne
@@ -220,7 +220,7 @@ class FlatDatas ( object ):
             dict: Cleaned datas from GPT
         """
         
-        """Datas to current key"""
+        """Current key datas"""
         self.datas [ key ] = copy.deepcopy ( self._datas_tpl );
         
         ## Clean : userReportedSpamRatio
