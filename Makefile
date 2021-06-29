@@ -8,6 +8,7 @@ SPHINXBUILD?=sphinx-build
 SOURCEDIR=docs/
 BUILDDIR=docs/
 PYTHON=python
+TWINE=twine
 
 all: run
 
@@ -31,7 +32,10 @@ valid-full-coverage: ; $(eval PERCENT_COVERAGE=$(shell nosetests --with-coverage
 
 compile:
 	## To use it : make target=<TARGET> deploy
-	python setup.py sdist upload -r $(target)
+	$(PYTHON) setup.py sdist
+	$(PYTHON) setup.py bdist_wheel
+	$(TWINE) check dist/*
+	$(TWINE) upload -r $(target) dist/*
 
 .PHONY: docs
 docs:
