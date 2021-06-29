@@ -69,6 +69,6 @@ Translates string level from GTP to int
       --verbose          Verbose mode
       --version          Display version
 
-# Support
+# Support version
 
-Python : >=3.6
+Python : `>=3.6`
