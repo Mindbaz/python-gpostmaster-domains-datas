@@ -1,4 +1,4 @@
-# Google Postmaster Tools
+# Google Postmaster Datas
 
 Unofficial tool to download and flatten data from GPT. The recovered data will
 offer a simple schema in order to be able to easily save this data in a flat
