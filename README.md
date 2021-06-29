@@ -6,17 +6,17 @@ file or in database.
 
 ## Schema
 
-* user_report_spam_percent: float|None,
-* ips_reputations: list,
-* domain_reputation: level|None,
-* feedback_loop: {nb_campaigns: 0, percent_per_campaign: list },
-* auth_use_dkim_percent: float|None,
-* auth_use_spf_percent: float|None,
-* auth_use_dmarc_percent: float|None,
-* tls_inbound_percent: float|None,
-* delivery_errors: list,
-* domain: str,
-* date: str
+* user_report_spam_percent : `float|None`
+* ips_reputations : `list`
+* domain_reputation : `level|None`
+* feedback_loop : `{ nb_campaigns: 0, percent_per_campaign: list }`
+* auth_use_dkim_percent : `float|None`
+* auth_use_spf_percent : `float|None`
+* auth_use_dmarc_percent : `float|None`
+* tls_inbound_percent : `float|None`
+* delivery_errors : `list`
+* domain : `str`
+* date : `str`
 
 ### Level
 
@@ -32,11 +32,11 @@ Translates string level from GTP to int
   
 ### ips_reputations
   
-  [ { 'level': level, 'value': float, 'ips': str } ]
+    [ { 'level': level, 'value': float, 'ips': str } ]
 
 ### feedback_loop
 
-  percent_per_campaign: [ { 'uid': int, 'spam_percent': float } ]
+    percent_per_campaign : [ { 'uid': int, 'spam_percent': float } ]
 
 # How to use it
 
