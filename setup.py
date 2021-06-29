@@ -33,7 +33,7 @@ setup (
     author_email = 'vhenon@mindbaz.com',
     python_requires = '>=3.6',
     keywords = 'google postmaster tools',
-    license = 'MIT',
+    license = 'GPLv3',
     packages = [
         'googlepostmasterapi',
         'entry_points_googlepostmasterapi'
