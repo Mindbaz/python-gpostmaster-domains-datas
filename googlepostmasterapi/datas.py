@@ -130,6 +130,10 @@ class FlatDatas ( object ):
             return False;
         
         for fbl in value:
+            if ( 'spamRatio' not in fbl ):
+                ## Missing datas from gpostmasters
+                continue;
+            
             self.datas [ key ] [ 'feedback_loop' ] [ 'nb_row' ] += 1;
             self.datas [ key ] [ 'feedback_loop' ] [ 'percent_per_uid' ].append ( {
                 'uid': int ( fbl [ 'id' ] ),
