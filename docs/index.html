@@ -1,71 +1,34 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Google Postmaster Domains Datas &mdash; Google Postmaster Domains Datas 0.0.1 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="#" class="icon icon-home"> Google Postmaster Domains Datas
-          
-
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -73,98 +36,101 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <!-- Local TOC -->
               <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Google Postmaster Domains Datas</a></li>
+<li><a class="reference internal" href="#">Google Postmaster Domains Datas</a><ul>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster"><code class="docutils literal notranslate"><span class="pre">GPostmaster</span></code></a><ul>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster._uri_tpl"><code class="docutils literal notranslate"><span class="pre">GPostmaster._uri_tpl</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster._domains"><code class="docutils literal notranslate"><span class="pre">GPostmaster._domains</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster._service"><code class="docutils literal notranslate"><span class="pre">GPostmaster._service</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster._parser"><code class="docutils literal notranslate"><span class="pre">GPostmaster._parser</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster._stats"><code class="docutils literal notranslate"><span class="pre">GPostmaster._stats</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster._pool_size"><code class="docutils literal notranslate"><span class="pre">GPostmaster._pool_size</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster.__init__"><code class="docutils literal notranslate"><span class="pre">GPostmaster.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster._clean_domain_infos"><code class="docutils literal notranslate"><span class="pre">GPostmaster._clean_domain_infos()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster._clean_pool_returns"><code class="docutils literal notranslate"><span class="pre">GPostmaster._clean_pool_returns()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster._create_domain_uri"><code class="docutils literal notranslate"><span class="pre">GPostmaster._create_domain_uri()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster._create_pool_datas"><code class="docutils literal notranslate"><span class="pre">GPostmaster._create_pool_datas()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster._get_domain_infos_pool"><code class="docutils literal notranslate"><span class="pre">GPostmaster._get_domain_infos_pool()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster._gpt_get_domain_info"><code class="docutils literal notranslate"><span class="pre">GPostmaster._gpt_get_domain_info()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster._gpt_get_domains"><code class="docutils literal notranslate"><span class="pre">GPostmaster._gpt_get_domains()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster._init_parser_con"><code class="docutils literal notranslate"><span class="pre">GPostmaster._init_parser_con()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster._init_resources"><code class="docutils literal notranslate"><span class="pre">GPostmaster._init_resources()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster._init_service"><code class="docutils literal notranslate"><span class="pre">GPostmaster._init_service()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster._init_stats_con"><code class="docutils literal notranslate"><span class="pre">GPostmaster._init_stats_con()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster._load_token"><code class="docutils literal notranslate"><span class="pre">GPostmaster._load_token()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster._print_stats"><code class="docutils literal notranslate"><span class="pre">GPostmaster._print_stats()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster.get_all_domains_infos"><code class="docutils literal notranslate"><span class="pre">GPostmaster.get_all_domains_infos()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster.get_domain_infos"><code class="docutils literal notranslate"><span class="pre">GPostmaster.get_domain_infos()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster.get_domains"><code class="docutils literal notranslate"><span class="pre">GPostmaster.get_domains()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.gpt.GPostmaster.verbose"><code class="docutils literal notranslate"><span class="pre">GPostmaster.verbose</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#googlepostmasterapi.datas.FlatDatas"><code class="docutils literal notranslate"><span class="pre">FlatDatas</span></code></a><ul>
+<li><a class="reference internal" href="#googlepostmasterapi.datas.FlatDatas.datas"><code class="docutils literal notranslate"><span class="pre">FlatDatas.datas</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.datas.FlatDatas._datas_tpl"><code class="docutils literal notranslate"><span class="pre">FlatDatas._datas_tpl</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.datas.FlatDatas.dict_reputation"><code class="docutils literal notranslate"><span class="pre">FlatDatas.dict_reputation</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.datas.FlatDatas.__init__"><code class="docutils literal notranslate"><span class="pre">FlatDatas.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.datas.FlatDatas._parse_crypted_inbound"><code class="docutils literal notranslate"><span class="pre">FlatDatas._parse_crypted_inbound()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.datas.FlatDatas._parse_delivery_err"><code class="docutils literal notranslate"><span class="pre">FlatDatas._parse_delivery_err()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.datas.FlatDatas._parse_domain_reputations"><code class="docutils literal notranslate"><span class="pre">FlatDatas._parse_domain_reputations()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.datas.FlatDatas._parse_feed_back_loop"><code class="docutils literal notranslate"><span class="pre">FlatDatas._parse_feed_back_loop()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.datas.FlatDatas._parse_ips_reputations"><code class="docutils literal notranslate"><span class="pre">FlatDatas._parse_ips_reputations()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.datas.FlatDatas._parse_use_auth"><code class="docutils literal notranslate"><span class="pre">FlatDatas._parse_use_auth()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.datas.FlatDatas._parse_user_report_spam"><code class="docutils literal notranslate"><span class="pre">FlatDatas._parse_user_report_spam()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.datas.FlatDatas.parse"><code class="docutils literal notranslate"><span class="pre">FlatDatas.parse()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#googlepostmasterapi.stats.Stats"><code class="docutils literal notranslate"><span class="pre">Stats</span></code></a><ul>
+<li><a class="reference internal" href="#googlepostmasterapi.stats.Stats.datas"><code class="docutils literal notranslate"><span class="pre">Stats.datas</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.stats.Stats.__init__"><code class="docutils literal notranslate"><span class="pre">Stats.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.stats.Stats.add_err"><code class="docutils literal notranslate"><span class="pre">Stats.add_err()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.stats.Stats.add_err_http"><code class="docutils literal notranslate"><span class="pre">Stats.add_err_http()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.stats.Stats.add_ok"><code class="docutils literal notranslate"><span class="pre">Stats.add_ok()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.stats.Stats.add_total"><code class="docutils literal notranslate"><span class="pre">Stats.add_total()</span></code></a></li>
+<li><a class="reference internal" href="#googlepostmasterapi.stats.Stats.print_stats"><code class="docutils literal notranslate"><span class="pre">Stats.print_stats()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#googlepostmasterapi.utils.write_std"><code class="docutils literal notranslate"><span class="pre">write_std()</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
 </div>
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="#">Google Postmaster Domains Datas</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
-        
-      <li>Google Postmaster Domains Datas</li>
-    
-    
+      <li><a href="#" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Google Postmaster Domains Datas</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="module-googlepostmasterapi.gpt">
-<span id="google-postmaster-domains-datas"></span><h1>Google Postmaster Domains Datas<a class="headerlink" href="#module-googlepostmasterapi.gpt" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="module-googlepostmasterapi.gpt">
+<span id="google-postmaster-domains-datas"></span><h1>Google Postmaster Domains Datas<a class="headerlink" href="#module-googlepostmasterapi.gpt" title="Permalink to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">googlepostmasterapi.gpt.</span></span><span class="sig-name descname"><span class="pre">GPostmaster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pool_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">googlepostmasterapi.gpt.</span></span><span class="sig-name descname"><span class="pre">GPostmaster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pool_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster" title="Permalink to this definition"></a></dt>
 <dd><p>Download datas from Google postmaster tools</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster._uri_tpl">
-<span class="sig-name descname"><span class="pre">_uri_tpl</span></span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._uri_tpl" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_uri_tpl</span></span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._uri_tpl" title="Permalink to this definition"></a></dt>
 <dd><p>Template to create an uri to get domain infos</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -175,7 +141,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster._domains">
-<span class="sig-name descname"><span class="pre">_domains</span></span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._domains" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_domains</span></span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._domains" title="Permalink to this definition"></a></dt>
 <dd><p>All domains download from server</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -186,7 +152,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster._service">
-<span class="sig-name descname"><span class="pre">_service</span></span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._service" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_service</span></span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._service" title="Permalink to this definition"></a></dt>
 <dd><p>Connector to GPT</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -197,7 +163,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster._parser">
-<span class="sig-name descname"><span class="pre">_parser</span></span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._parser" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_parser</span></span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._parser" title="Permalink to this definition"></a></dt>
 <dd><p>Connector to datas cleaner</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -208,7 +174,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster._stats">
-<span class="sig-name descname"><span class="pre">_stats</span></span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._stats" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_stats</span></span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._stats" title="Permalink to this definition"></a></dt>
 <dd><p>Connector to statistiques datas</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -219,7 +185,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster._pool_size">
-<span class="sig-name descname"><span class="pre">_pool_size</span></span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._pool_size" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_pool_size</span></span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._pool_size" title="Permalink to this definition"></a></dt>
 <dd><p>Pool size to calls</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -230,7 +196,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pool_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster.__init__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pool_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Default constructor</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -244,7 +210,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster._clean_domain_infos">
-<span class="sig-name descname"><span class="pre">_clean_domain_infos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datas</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._clean_domain_infos" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_clean_domain_infos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datas</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._clean_domain_infos" title="Permalink to this definition"></a></dt>
 <dd><p>Clean domain infos</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -264,7 +230,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster._clean_pool_returns">
-<span class="sig-name descname"><span class="pre">_clean_pool_returns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datas</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._clean_pool_returns" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_clean_pool_returns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datas</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._clean_pool_returns" title="Permalink to this definition"></a></dt>
 <dd><p>Clean result from pool map returns : remove all state==false</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -281,7 +247,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster._create_domain_uri">
-<span class="sig-name descname"><span class="pre">_create_domain_uri</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._create_domain_uri" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_create_domain_uri</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._create_domain_uri" title="Permalink to this definition"></a></dt>
 <dd><p>Create URI to a domain to query</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -295,7 +261,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster._create_pool_datas">
-<span class="sig-name descname"><span class="pre">_create_pool_datas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._create_pool_datas" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_create_pool_datas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._create_pool_datas" title="Permalink to this definition"></a></dt>
 <dd><p>Create datas to map call on pool with all domains</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -312,7 +278,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster._get_domain_infos_pool">
-<span class="sig-name descname"><span class="pre">_get_domain_infos_pool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datas</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._get_domain_infos_pool" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_get_domain_infos_pool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datas</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._get_domain_infos_pool" title="Permalink to this definition"></a></dt>
 <dd><p>Abstract call to get_domain_infos from pool with datas as dict</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -329,7 +295,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster._gpt_get_domain_info">
-<span class="sig-name descname"><span class="pre">_gpt_get_domain_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._gpt_get_domain_info" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_gpt_get_domain_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._gpt_get_domain_info" title="Permalink to this definition"></a></dt>
 <dd><p>Call GPT to get all infos to a domain</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -349,7 +315,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster._gpt_get_domains">
-<span class="sig-name descname"><span class="pre">_gpt_get_domains</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._gpt_get_domains" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_gpt_get_domains</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._gpt_get_domains" title="Permalink to this definition"></a></dt>
 <dd><p>Call GPT to get all domains</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -363,13 +329,13 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster._init_parser_con">
-<span class="sig-name descname"><span class="pre">_init_parser_con</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._init_parser_con" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_init_parser_con</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._init_parser_con" title="Permalink to this definition"></a></dt>
 <dd><p>Init datas parser/cleaner con</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster._init_resources">
-<span class="sig-name descname"><span class="pre">_init_resources</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._init_resources" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_init_resources</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._init_resources" title="Permalink to this definition"></a></dt>
 <dd><p>Init resources used by system : init service / parser / stats</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -380,7 +346,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster._init_service">
-<span class="sig-name descname"><span class="pre">_init_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._init_service" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_init_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._init_service" title="Permalink to this definition"></a></dt>
 <dd><p>Init service connector</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -391,13 +357,13 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster._init_stats_con">
-<span class="sig-name descname"><span class="pre">_init_stats_con</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._init_stats_con" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_init_stats_con</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._init_stats_con" title="Permalink to this definition"></a></dt>
 <dd><p>Init stats con. Should be manager by multiprocessing to work with pool</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster._load_token">
-<span class="sig-name descname"><span class="pre">_load_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._load_token" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_load_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._load_token" title="Permalink to this definition"></a></dt>
 <dd><p>Load GPT token</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -408,13 +374,13 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster._print_stats">
-<span class="sig-name descname"><span class="pre">_print_stats</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._print_stats" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_print_stats</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._print_stats" title="Permalink to this definition"></a></dt>
 <dd><p>Display calls statistics</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster.get_all_domains_infos">
-<span class="sig-name descname"><span class="pre">get_all_domains_infos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster.get_all_domains_infos" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_all_domains_infos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster.get_all_domains_infos" title="Permalink to this definition"></a></dt>
 <dd><p>Call GPT on all available domains</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -431,7 +397,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster.get_domain_infos">
-<span class="sig-name descname"><span class="pre">get_domain_infos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_stats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster.get_domain_infos" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_domain_infos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_stats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster.get_domain_infos" title="Permalink to this definition"></a></dt>
 <dd><p>Get infos to a domain</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -452,13 +418,13 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster.get_domains">
-<span class="sig-name descname"><span class="pre">get_domains</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster.get_domains" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_domains</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster.get_domains" title="Permalink to this definition"></a></dt>
 <dd><p>Get all domains with permissions : owner/reader</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="googlepostmasterapi.gpt.GPostmaster.verbose">
-<span class="sig-name descname"><span class="pre">verbose</span></span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster.verbose" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">verbose</span></span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster.verbose" title="Permalink to this definition"></a></dt>
 <dd><p>Template to create an uri to get domain infos</p>
 </dd></dl>
 
@@ -466,11 +432,11 @@
 
 <span class="target" id="module-googlepostmasterapi.datas"></span><dl class="py class">
 <dt class="sig sig-object py" id="googlepostmasterapi.datas.FlatDatas">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">googlepostmasterapi.datas.</span></span><span class="sig-name descname"><span class="pre">FlatDatas</span></span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">googlepostmasterapi.datas.</span></span><span class="sig-name descname"><span class="pre">FlatDatas</span></span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas" title="Permalink to this definition"></a></dt>
 <dd><p>Clean datas traffic stats from Google Postmaster Tools</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="googlepostmasterapi.datas.FlatDatas.datas">
-<span class="sig-name descname"><span class="pre">datas</span></span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas.datas" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">datas</span></span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas.datas" title="Permalink to this definition"></a></dt>
 <dd><p>Datas cleaned</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -481,7 +447,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="googlepostmasterapi.datas.FlatDatas._datas_tpl">
-<span class="sig-name descname"><span class="pre">_datas_tpl</span></span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._datas_tpl" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_datas_tpl</span></span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._datas_tpl" title="Permalink to this definition"></a></dt>
 <dd><p>Template to clean datas</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -492,7 +458,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="googlepostmasterapi.datas.FlatDatas.dict_reputation">
-<span class="sig-name descname"><span class="pre">dict_reputation</span></span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas.dict_reputation" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">dict_reputation</span></span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas.dict_reputation" title="Permalink to this definition"></a></dt>
 <dd><p>Assoc to translate EN reputation to int</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -503,13 +469,13 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.datas.FlatDatas.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas.__init__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Default constructor</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.datas.FlatDatas._parse_crypted_inbound">
-<span class="sig-name descname"><span class="pre">_parse_crypted_inbound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._parse_crypted_inbound" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_parse_crypted_inbound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._parse_crypted_inbound" title="Permalink to this definition"></a></dt>
 <dd><p>Clean part of key : inboundEncryptionRatio</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -529,7 +495,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.datas.FlatDatas._parse_delivery_err">
-<span class="sig-name descname"><span class="pre">_parse_delivery_err</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._parse_delivery_err" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_parse_delivery_err</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._parse_delivery_err" title="Permalink to this definition"></a></dt>
 <dd><p>Clean part of key : deliveryErrors</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -549,7 +515,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.datas.FlatDatas._parse_domain_reputations">
-<span class="sig-name descname"><span class="pre">_parse_domain_reputations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._parse_domain_reputations" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_parse_domain_reputations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._parse_domain_reputations" title="Permalink to this definition"></a></dt>
 <dd><p>Clean part of key : domainReputation</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -569,7 +535,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.datas.FlatDatas._parse_feed_back_loop">
-<span class="sig-name descname"><span class="pre">_parse_feed_back_loop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._parse_feed_back_loop" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_parse_feed_back_loop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._parse_feed_back_loop" title="Permalink to this definition"></a></dt>
 <dd><p>Clean part of key : spammyFeedbackLoops</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -589,7 +555,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.datas.FlatDatas._parse_ips_reputations">
-<span class="sig-name descname"><span class="pre">_parse_ips_reputations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._parse_ips_reputations" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_parse_ips_reputations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._parse_ips_reputations" title="Permalink to this definition"></a></dt>
 <dd><p>Clean part of key : ipReputations</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -609,7 +575,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.datas.FlatDatas._parse_use_auth">
-<span class="sig-name descname"><span class="pre">_parse_use_auth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._parse_use_auth" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_parse_use_auth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._parse_use_auth" title="Permalink to this definition"></a></dt>
 <dd><p>Clean part of keys : dkimSuccessRatio / spfSuccessRatio / dmarcSuccessRatio</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -631,7 +597,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.datas.FlatDatas._parse_user_report_spam">
-<span class="sig-name descname"><span class="pre">_parse_user_report_spam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._parse_user_report_spam" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_parse_user_report_spam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._parse_user_report_spam" title="Permalink to this definition"></a></dt>
 <dd><p>Clean part of key : userReportedSpamRatio</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -651,7 +617,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.datas.FlatDatas.parse">
-<span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datas</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas.parse" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datas</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas.parse" title="Permalink to this definition"></a></dt>
 <dd><p>Parse datas from GPT to a flatern version with all values</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -673,11 +639,11 @@
 
 <span class="target" id="module-googlepostmasterapi.stats"></span><dl class="py class">
 <dt class="sig sig-object py" id="googlepostmasterapi.stats.Stats">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">googlepostmasterapi.stats.</span></span><span class="sig-name descname"><span class="pre">Stats</span></span><a class="headerlink" href="#googlepostmasterapi.stats.Stats" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">googlepostmasterapi.stats.</span></span><span class="sig-name descname"><span class="pre">Stats</span></span><a class="headerlink" href="#googlepostmasterapi.stats.Stats" title="Permalink to this definition"></a></dt>
 <dd><p>Process stats of GPostmaster</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="googlepostmasterapi.stats.Stats.datas">
-<span class="sig-name descname"><span class="pre">datas</span></span><a class="headerlink" href="#googlepostmasterapi.stats.Stats.datas" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">datas</span></span><a class="headerlink" href="#googlepostmasterapi.stats.Stats.datas" title="Permalink to this definition"></a></dt>
 <dd><p>Statistics from domains infos download</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -688,19 +654,19 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.stats.Stats.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.stats.Stats.__init__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.stats.Stats.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Default constructor</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.stats.Stats.add_err">
-<span class="sig-name descname"><span class="pre">add_err</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.stats.Stats.add_err" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_err</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.stats.Stats.add_err" title="Permalink to this definition"></a></dt>
 <dd><p>Increment counters : total + err</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.stats.Stats.add_err_http">
-<span class="sig-name descname"><span class="pre">add_err_http</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">err</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.stats.Stats.add_err_http" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_err_http</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">err</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.stats.Stats.add_err_http" title="Permalink to this definition"></a></dt>
 <dd><p>Increment counters : total + err &amp; add domain to http error datas</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -715,19 +681,19 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.stats.Stats.add_ok">
-<span class="sig-name descname"><span class="pre">add_ok</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.stats.Stats.add_ok" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_ok</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.stats.Stats.add_ok" title="Permalink to this definition"></a></dt>
 <dd><p>Increment counters : total + ok</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.stats.Stats.add_total">
-<span class="sig-name descname"><span class="pre">add_total</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.stats.Stats.add_total" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_total</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.stats.Stats.add_total" title="Permalink to this definition"></a></dt>
 <dd><p>Increment counter : total</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.stats.Stats.print_stats">
-<span class="sig-name descname"><span class="pre">print_stats</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.stats.Stats.print_stats" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">print_stats</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.stats.Stats.print_stats" title="Permalink to this definition"></a></dt>
 <dd><p>Display calls statistics</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -743,7 +709,7 @@
 
 <span class="target" id="module-googlepostmasterapi.utils"></span><dl class="py function">
 <dt class="sig sig-object py" id="googlepostmasterapi.utils.write_std">
-<span class="sig-prename descclassname"><span class="pre">googlepostmasterapi.utils.</span></span><span class="sig-name descname"><span class="pre">write_std</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.utils.write_std" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">googlepostmasterapi.utils.</span></span><span class="sig-name descname"><span class="pre">write_std</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.utils.write_std" title="Permalink to this definition"></a></dt>
 <dd><p>Quick write on stdout</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -754,58 +720,42 @@
 
 <div class="toctree-wrapper compound">
 </div>
-</div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading"></a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
 <li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
-</div>
+</section>
 
 
            </div>
-           
           </div>
           <footer>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, Mindbaz.
-
-    </p>
+    <p>&#169; Copyright 2021, Mindbaz.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
