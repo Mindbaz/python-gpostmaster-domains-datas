@@ -17,7 +17,7 @@ class FlatDatas__parse_user_report_spamTest ( unittest.TestCase ):
         
         ret = p._parse_user_report_spam ( key = 'random-key', value = '0.1234' );
         self.assertTrue ( ret );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'user_report_spam_percent' ], 12.3 );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'user_report_spam_percent' ], 12.3 );
 
         
     def test_no_value ( self ):
@@ -26,7 +26,7 @@ class FlatDatas__parse_user_report_spamTest ( unittest.TestCase ):
         
         ret = p._parse_user_report_spam ( key = 'random-key', value = None );
         self.assertFalse ( ret );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'user_report_spam_percent' ], None );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'user_report_spam_percent' ], None );
 
 
         

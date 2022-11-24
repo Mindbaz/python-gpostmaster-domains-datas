@@ -21,7 +21,7 @@ class FlatDatas__parse_crypted_inboundTest ( unittest.TestCase ):
         );
         
         self.assertTrue ( ret );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'tls_inbound_percent' ], 45.7 );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'tls_inbound_percent' ], 45.7 );
 
         
     def test_no_value ( self ):
@@ -34,7 +34,7 @@ class FlatDatas__parse_crypted_inboundTest ( unittest.TestCase ):
         );
         
         self.assertFalse ( ret );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'tls_inbound_percent' ], None );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'tls_inbound_percent' ], None );
 
 
 

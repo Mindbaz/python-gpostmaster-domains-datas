@@ -22,8 +22,8 @@ class GPostmaster__init_resourcesTest ( unittest.TestCase ):
                     init_service.assert_called_with (
                         token = 'random-token'
                     );
-                    self.assertEquals ( init_parser.call_count, 1 );
-                    self.assertEquals ( init_stats.call_count, 1 );
+                    self.assertEqual ( init_parser.call_count, 1 );
+                    self.assertEqual ( init_stats.call_count, 1 );
             
             
 if __name__ == '__main__':

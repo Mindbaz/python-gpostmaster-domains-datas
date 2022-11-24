@@ -16,10 +16,10 @@ class Stats_constructorTest ( unittest.TestCase ):
         s = Stats ();
         
         self.assertTrue ( type ( s.datas ) is dict );
-        self.assertEquals ( s.datas [ 'total' ], 0 );
-        self.assertEquals ( s.datas [ 'ok' ], 0 );
-        self.assertEquals ( s.datas [ 'err' ], 0 );
-        self.assertEquals ( s.datas [ 'err_http' ], {} );
+        self.assertEqual ( s.datas [ 'total' ], 0 );
+        self.assertEqual ( s.datas [ 'ok' ], 0 );
+        self.assertEqual ( s.datas [ 'err' ], 0 );
+        self.assertEqual ( s.datas [ 'err_http' ], {} );
 
                         
             

@@ -35,7 +35,7 @@ class GPostmaster__clean_domain_infosTest ( unittest.TestCase ):
                     datas = 'random-datas'
                 );
                 
-                self.assertEquals ( ret, 'random-returns' );
+                self.assertEqual ( ret, 'random-returns' );
                 parse_call.assert_called_with (
                     key = 'random-key',
                     datas = 'random-datas'

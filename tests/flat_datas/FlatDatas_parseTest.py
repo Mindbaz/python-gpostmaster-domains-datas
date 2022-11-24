@@ -37,11 +37,11 @@ class FlatDatas_parseTest ( unittest.TestCase ):
                                                 'deliveryErrors': 'random-delivery-errors',
                                             }
                                         );
-                                        self.assertEquals ( ret, 'random-dict' );
+                                        self.assertEqual ( ret, 'random-dict' );
                                         
                                         self.assertTrue ( 'random-key' not in p.datas );
                                         
-                                        self.assertEquals ( deep_copy.call_count, 2 );
+                                        self.assertEqual ( deep_copy.call_count, 2 );
                                         deep_copy.assert_any_call ( { 'random-key': 'random-value' } );
                                         deep_copy.assert_any_call ( 'random-dict' );
                                         parse_user_report_spam.assert_called_with (

@@ -17,8 +17,8 @@ class Stats_add_errTest ( unittest.TestCase ):
             s = Stats ();
             s.datas = { 'err': 789 };
             s.add_err ();
-            self.assertEquals ( s.datas [ 'err' ], 790 );
-            self.assertEquals ( add_total.call_count, 1 );
+            self.assertEqual ( s.datas [ 'err' ], 790 );
+            self.assertEqual ( add_total.call_count, 1 );
             
             
             

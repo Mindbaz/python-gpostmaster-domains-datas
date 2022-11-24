@@ -14,11 +14,11 @@ class FlatDatas_constructorTest ( unittest.TestCase ):
     def test_constructor ( self ):
         p = FlatDatas ();
 
-        self.assertEquals ( p.datas, {} );
+        self.assertEqual ( p.datas, {} );
         self.assertTrue ( type ( p._datas_tpl ) is dict );
-        self.assertEquals ( len ( p._datas_tpl.keys () ), 9 );
+        self.assertEqual ( len ( p._datas_tpl.keys () ), 9 );
         self.assertTrue ( type ( p.dict_reputation ) is dict );
-        self.assertEquals ( len ( p.dict_reputation.keys () ), 5 );
+        self.assertEqual ( len ( p.dict_reputation.keys () ), 5 );
 
         
     def test_datas_tpl_values ( self ):
@@ -26,16 +26,16 @@ class FlatDatas_constructorTest ( unittest.TestCase ):
 
         ## None
         for k in [ 'user_report_spam_percent', 'domain_reputation', 'auth_use_dkim_percent', 'auth_use_spf_percent', 'auth_use_dmarc_percent', 'tls_inbound_percent' ]:
-            self.assertEquals ( p._datas_tpl [ k ], None );
+            self.assertEqual ( p._datas_tpl [ k ], None );
 
         ## FBL
         for k in [ 'feedback_loop' ]:
-            self.assertEquals ( p._datas_tpl [ k ] [ 'nb_row' ], 0 );
-            self.assertEquals ( p._datas_tpl [ k ] [ 'percent_per_uid' ], [] );
+            self.assertEqual ( p._datas_tpl [ k ] [ 'nb_row' ], 0 );
+            self.assertEqual ( p._datas_tpl [ k ] [ 'percent_per_uid' ], [] );
 
         ## []
         for k in [ 'delivery_errors', 'ips_reputations' ]:
-            self.assertEquals ( p._datas_tpl [ k ], [] );
+            self.assertEqual ( p._datas_tpl [ k ], [] );
 
         
     def test_dict_reputation_values ( self ):

@@ -58,15 +58,15 @@ class GPostmaster__load_tokenTest ( unittest.TestCase ):
                         token = 'another-credentials'
                     );
 
-                    self.assertEquals ( ret, 'random-returns' );
+                    self.assertEqual ( ret, 'random-returns' );
                     open_call.asser_called_with (
                         'another-credentials',
                         'rb'
                     );
-                    self.assertEquals ( p_load.call_count, 1 );
+                    self.assertEqual ( p_load.call_count, 1 );
                     for call in p_load.call_args_list:
                         args, kwargs = call;
-                        self.assertEquals ( args [ 0 ], HandleMock );
+                        self.assertEqual ( args [ 0 ], HandleMock );
                         
             
             

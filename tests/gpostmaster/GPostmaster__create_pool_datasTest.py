@@ -23,7 +23,7 @@ class GPostmaster__create_pool_datasTest ( unittest.TestCase ):
             ret = w._create_pool_datas (
                 input_date = 'random-input-date'
             );
-            self.assertEquals ( ret, [
+            self.assertEqual ( ret, [
                 { 'domain': 'random-domain-1', 'input_date': 'random-input-date' },
                 { 'domain': 'random-domain-2', 'input_date': 'random-input-date' },
                 { 'domain': 'random-domain-3', 'input_date': 'random-input-date' }

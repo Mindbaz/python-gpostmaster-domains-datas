@@ -27,7 +27,7 @@ class GPostmaster__clean_pool_returnsTest ( unittest.TestCase ):
                     { 'state': False, 'key': 'random-datas-3' },
                     { 'state': True, 'key': 'random-datas-4' }
                 ] );
-            self.assertEquals ( ret, [
+            self.assertEqual ( ret, [
                 { 'state': True, 'key': 'random-datas-2' },
                 { 'state': True, 'key': 'random-datas-4' }
             ] );

@@ -26,7 +26,7 @@ class GPostmaster__get_domain_infos_poolTest ( unittest.TestCase ):
                         'domain': 'random-domain',
                         'input_date': 'random-input-date'
                     } );
-                self.assertEquals ( ret, 'random-returns' );
+                self.assertEqual ( ret, 'random-returns' );
                 get_domain_infos.assert_called_with (
                     domain = 'random-domain',
                     input_date = 'random-input-date',

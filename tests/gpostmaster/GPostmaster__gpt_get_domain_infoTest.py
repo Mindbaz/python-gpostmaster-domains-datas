@@ -79,14 +79,14 @@ class GPostmaster__gpt_get_domain_infoTest ( unittest.TestCase ):
                                             );
                                             
                                             self.assertTrue ( ret [ 'state' ] );
-                                            self.assertEquals ( ret [ 'result' ], 'random-returns' );
+                                            self.assertEqual ( ret [ 'result' ], 'random-returns' );
                                             
                                             create_uri.assert_called_with (
                                                 domain = 'random-domain',
                                                 input_date = 'random-input-date'
                                             );
                                             write_std.assert_not_called ();
-                                            self.assertEquals ( stats_add_ok.call_count, 1 );
+                                            self.assertEqual ( stats_add_ok.call_count, 1 );
                                             stats_add_err_http.assert_not_called ();
 
                                     
@@ -109,7 +109,7 @@ class GPostmaster__gpt_get_domain_infoTest ( unittest.TestCase ):
                                 );
                                 
                                 self.assertFalse ( ret [ 'state' ] );
-                                self.assertEquals ( ret [ 'result' ], None );
+                                self.assertEqual ( ret [ 'result' ], None );
                                 
                                 create_uri.assert_called_with (
                                     domain = 'random-domain',
@@ -147,14 +147,14 @@ class GPostmaster__gpt_get_domain_infoTest ( unittest.TestCase ):
                                             );
                                             
                                             self.assertTrue ( ret [ 'state' ] );
-                                            self.assertEquals ( ret [ 'result' ], 'random-returns' );
+                                            self.assertEqual ( ret [ 'result' ], 'random-returns' );
                                             
                                             create_uri.assert_called_with (
                                                 domain = 'random-domain',
                                                 input_date = 'random-input-date'
                                             );
                                             write_std.assert_called_with ( [ 'Get domain info : random-domain' ] );
-                                            self.assertEquals ( stats_add_ok.call_count, 1 );
+                                            self.assertEqual ( stats_add_ok.call_count, 1 );
                                             stats_add_err_http.assert_not_called ();
                                 
 

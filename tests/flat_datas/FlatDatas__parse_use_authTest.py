@@ -23,9 +23,9 @@ class FlatDatas__parse_use_authTest ( unittest.TestCase ):
         );
             
         self.assertTrue ( ret );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'auth_use_dkim_percent' ], 12.3 );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'auth_use_spf_percent' ], 45.7 );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'auth_use_dmarc_percent' ], 78.9 );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'auth_use_dkim_percent' ], 12.3 );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'auth_use_spf_percent' ], 45.7 );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'auth_use_dmarc_percent' ], 78.9 );
 
         
     def test_no_dkim ( self ):
@@ -39,9 +39,9 @@ class FlatDatas__parse_use_authTest ( unittest.TestCase ):
         );
             
         self.assertTrue ( ret );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'auth_use_dkim_percent' ], None );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'auth_use_spf_percent' ], 45.7 );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'auth_use_dmarc_percent' ], 78.9 );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'auth_use_dkim_percent' ], None );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'auth_use_spf_percent' ], 45.7 );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'auth_use_dmarc_percent' ], 78.9 );
 
         
     def test_no_spf ( self ):
@@ -55,9 +55,9 @@ class FlatDatas__parse_use_authTest ( unittest.TestCase ):
         );
             
         self.assertTrue ( ret );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'auth_use_dkim_percent' ], 12.3 );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'auth_use_spf_percent' ], None );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'auth_use_dmarc_percent' ], 78.9 );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'auth_use_dkim_percent' ], 12.3 );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'auth_use_spf_percent' ], None );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'auth_use_dmarc_percent' ], 78.9 );
 
         
     def test_no_dmarc ( self ):
@@ -71,9 +71,9 @@ class FlatDatas__parse_use_authTest ( unittest.TestCase ):
         );
             
         self.assertTrue ( ret );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'auth_use_dkim_percent' ], 12.3 );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'auth_use_spf_percent' ], 45.7 );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'auth_use_dmarc_percent' ], None );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'auth_use_dkim_percent' ], 12.3 );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'auth_use_spf_percent' ], 45.7 );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'auth_use_dmarc_percent' ], None );
 
         
     def test_no_one ( self ):
@@ -84,9 +84,9 @@ class FlatDatas__parse_use_authTest ( unittest.TestCase ):
         p.datas [ 'random-key' ] = p._datas_tpl.copy ();
             
         self.assertFalse ( ret );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'auth_use_dkim_percent' ], None );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'auth_use_spf_percent' ], None );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'auth_use_dmarc_percent' ], None );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'auth_use_dkim_percent' ], None );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'auth_use_spf_percent' ], None );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'auth_use_dmarc_percent' ], None );
 
         
     def test_values_none ( self ):
@@ -101,9 +101,9 @@ class FlatDatas__parse_use_authTest ( unittest.TestCase ):
         );
         
         self.assertFalse ( ret );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'auth_use_dkim_percent' ], None );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'auth_use_spf_percent' ], None );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'auth_use_dmarc_percent' ], None );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'auth_use_dkim_percent' ], None );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'auth_use_spf_percent' ], None );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'auth_use_dmarc_percent' ], None );
 
 
 

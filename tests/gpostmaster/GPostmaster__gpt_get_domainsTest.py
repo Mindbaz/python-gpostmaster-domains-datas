@@ -42,10 +42,10 @@ class GPostmaster__gpt_get_domainsTest ( unittest.TestCase ):
 
                         ret = w._gpt_get_domains ();
 
-                        self.assertEquals ( ret, 'random-returns' );
-                        self.assertEquals ( domains_call.call_count, 1 );
-                        self.assertEquals ( list_call.call_count, 1 );
-                        self.assertEquals ( execute_call.call_count, 1 );
+                        self.assertEqual ( ret, 'random-returns' );
+                        self.assertEqual ( domains_call.call_count, 1 );
+                        self.assertEqual ( list_call.call_count, 1 );
+                        self.assertEqual ( execute_call.call_count, 1 );
 
                         
             

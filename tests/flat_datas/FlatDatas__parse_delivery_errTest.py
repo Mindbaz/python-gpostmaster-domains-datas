@@ -26,7 +26,7 @@ class FlatDatas__parse_delivery_errTest ( unittest.TestCase ):
         );
         
         self.assertTrue ( ret );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'delivery_errors' ], [
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'delivery_errors' ], [
             { 'type': 'random-type-1', 'class': 'random-class-1', 'percent': 12.3 },
             { 'type': 'random-type-2', 'class': 'random-class-1', 'percent': 45.7 },
             { 'type': 'random-type-1', 'class': 'random-class-2', 'percent': 78.9 }
@@ -43,7 +43,7 @@ class FlatDatas__parse_delivery_errTest ( unittest.TestCase ):
         );
         
         self.assertFalse ( ret );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'delivery_errors' ], [] );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'delivery_errors' ], [] );
 
         
         

@@ -17,8 +17,8 @@ class Stats_add_okTest ( unittest.TestCase ):
             s = Stats ();
             s.datas = { 'ok': 456 };
             s.add_ok ();
-            self.assertEquals ( s.datas [ 'ok' ], 457 );
-            self.assertEquals ( add_total.call_count, 1 );
+            self.assertEqual ( s.datas [ 'ok' ], 457 );
+            self.assertEqual ( add_total.call_count, 1 );
             
             
             

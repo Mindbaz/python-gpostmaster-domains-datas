@@ -24,7 +24,7 @@ class GPostmaster__create_domain_uriTest ( unittest.TestCase ):
                 input_date = 'random-input-date'
             );
 
-            self.assertEquals ( ret, 'random uri with : random-domain / random-input-date' );
+            self.assertEqual ( ret, 'random uri with : random-domain / random-input-date' );
 
                     
 

@@ -42,15 +42,15 @@ class GPostmaster__init_stats_conTest ( unittest.TestCase ):
                             
                             w._init_stats_con ();
                             
-                            self.assertEquals ( w._stats, 'random-stats-instance' );
-                            self.assertEquals ( register.call_count, 1 );
+                            self.assertEqual ( w._stats, 'random-stats-instance' );
+                            self.assertEqual ( register.call_count, 1 );
                             for call in register.call_args_list:
                                 args, kwargs = call;
-                                self.assertEquals ( args [ 0 ], 'Stats' );
-                                self.assertEquals ( args [ 1 ].__name__, 'Stats' );
-                            self.assertEquals ( base_manager.call_count, 1 );
-                            self.assertEquals ( start.call_count, 1 );
-                            self.assertEquals ( stats.call_count, 1 );
+                                self.assertEqual ( args [ 0 ], 'Stats' );
+                                self.assertEqual ( args [ 1 ].__name__, 'Stats' );
+                            self.assertEqual ( base_manager.call_count, 1 );
+                            self.assertEqual ( start.call_count, 1 );
+                            self.assertEqual ( stats.call_count, 1 );
                                 
                                 
             

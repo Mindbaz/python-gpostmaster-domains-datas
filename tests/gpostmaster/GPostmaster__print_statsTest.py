@@ -32,7 +32,7 @@ class GPostmaster__print_statsTest ( unittest.TestCase ):
                 w._stats = StatsMock ();
 
                 w._print_stats ();
-                self.assertEquals ( print_stats.call_count, 1 );
+                self.assertEqual ( print_stats.call_count, 1 );
                 
             
             

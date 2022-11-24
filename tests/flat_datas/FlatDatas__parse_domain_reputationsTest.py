@@ -26,7 +26,7 @@ class FlatDatas__parse_domain_reputationsTest ( unittest.TestCase ):
             value = 'RANDOM-VALUE-1'
         );
         self.assertTrue ( ret );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'domain_reputation' ], 'random-assoc-1' );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'domain_reputation' ], 'random-assoc-1' );
 
         
     def test_no_value ( self ):
@@ -44,7 +44,7 @@ class FlatDatas__parse_domain_reputationsTest ( unittest.TestCase ):
             value = None
         );
         self.assertFalse ( ret );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'domain_reputation' ], None );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'domain_reputation' ], None );
 
         
     def test_unknow_value ( self ):
@@ -62,7 +62,7 @@ class FlatDatas__parse_domain_reputationsTest ( unittest.TestCase ):
             value = 'RANDOM-VALUE-4'
         );
         self.assertTrue ( ret );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'domain_reputation' ], 0 );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'domain_reputation' ], 0 );
 
 
 

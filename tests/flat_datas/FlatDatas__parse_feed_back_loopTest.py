@@ -24,8 +24,8 @@ class FlatDatas__parse_feed_back_loopTest ( unittest.TestCase ):
         );
             
         self.assertTrue ( ret );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'feedback_loop' ] [ 'nb_row' ], 2 );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'feedback_loop' ] [ 'percent_per_uid' ], [
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'feedback_loop' ] [ 'nb_row' ], 2 );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'feedback_loop' ] [ 'percent_per_uid' ], [
             { 'uid': 123, 'spam_percent': 12.3 },
             { 'uid': 456, 'spam_percent': 45.7 }
         ] );
@@ -41,8 +41,8 @@ class FlatDatas__parse_feed_back_loopTest ( unittest.TestCase ):
         );
         
         self.assertFalse ( ret );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'feedback_loop' ] [ 'nb_row' ], 0 );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'feedback_loop' ] [ 'percent_per_uid' ], [] );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'feedback_loop' ] [ 'nb_row' ], 0 );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'feedback_loop' ] [ 'percent_per_uid' ], [] );
 
         
     def test_missing_field_spamRatio ( self ):
@@ -58,8 +58,8 @@ class FlatDatas__parse_feed_back_loopTest ( unittest.TestCase ):
         );
             
         self.assertTrue ( ret );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'feedback_loop' ] [ 'nb_row' ], 1 );
-        self.assertEquals ( p.datas [ 'random-key' ] [ 'feedback_loop' ] [ 'percent_per_uid' ], [
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'feedback_loop' ] [ 'nb_row' ], 1 );
+        self.assertEqual ( p.datas [ 'random-key' ] [ 'feedback_loop' ] [ 'percent_per_uid' ], [
             { 'uid': 456, 'spam_percent': 45.7 }
         ] );
 

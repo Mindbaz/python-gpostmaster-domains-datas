@@ -27,7 +27,7 @@ class Stats__print_statsTest ( unittest.TestCase ):
             
             ret = s.print_stats ();
             self.assertTrue ( ret );
-            self.assertEquals ( write_std.call_count, 3 );
+            self.assertEqual ( write_std.call_count, 3 );
             
             for call in write_std.call_args_list:
                 args, kwargs = call;
@@ -63,7 +63,7 @@ class Stats__print_statsTest ( unittest.TestCase ):
             
             ret = s.print_stats ();
             self.assertTrue ( ret );
-            self.assertEquals ( write_std.call_count, 1 );
+            self.assertEqual ( write_std.call_count, 1 );
             
             write_std.assert_any_call ( [
                 'Total calls : 202',

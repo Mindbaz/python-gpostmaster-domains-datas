@@ -54,23 +54,23 @@ class GPostmaster_get_all_domains_infosTest ( unittest.TestCase ):
                                             input_date = 'random-input-date'
                                         );
                                         
-                                        self.assertEquals ( ret, 'random-cleaned-datas' );
-                                        self.assertEquals ( get_domains.call_count, 1 );
+                                        self.assertEqual ( ret, 'random-cleaned-datas' );
+                                        self.assertEqual ( get_domains.call_count, 1 );
                                         create_pool_datas.assert_called_with (
                                             input_date = 'random-input-date'
                                         );
                                         init_pool.assert_called_with (
                                             processes = 52
                                         );
-                                        self.assertEquals ( map_call.call_count, 1 );
+                                        self.assertEqual ( map_call.call_count, 1 );
                                         for call in map_call.call_args_list:
                                             args, kwargs = call;
-                                            self.assertEquals ( args [ 0 ], w._get_domain_infos_pool );
-                                            self.assertEquals ( args [ 1 ], [ 'random-pool-datas' ] );
+                                            self.assertEqual ( args [ 0 ], w._get_domain_infos_pool );
+                                            self.assertEqual ( args [ 1 ], [ 'random-pool-datas' ] );
                                         clean_pool_returns.assert_called_with (
                                             datas = 'random-map-returns'
                                         );
-                                        self.assertEquals ( print_stats.call_count, 1 );
+                                        self.assertEqual ( print_stats.call_count, 1 );
                                         write_std.assert_not_called ();
 
                                         
@@ -92,8 +92,8 @@ class GPostmaster_get_all_domains_infosTest ( unittest.TestCase ):
                                             input_date = 'random-input-date'
                                         );
                                         
-                                        self.assertEquals ( ret, [] );
-                                        self.assertEquals ( get_domains.call_count, 1 );
+                                        self.assertEqual ( ret, [] );
+                                        self.assertEqual ( get_domains.call_count, 1 );
                                         create_pool_datas.assert_called_with (
                                             input_date = 'random-input-date'
                                         );

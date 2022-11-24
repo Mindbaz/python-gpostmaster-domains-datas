@@ -17,7 +17,7 @@ class Stats_add_totalTest ( unittest.TestCase ):
         s.datas = { 'total': 123 };
         s.add_total ();
         
-        self.assertEquals ( s.datas [ 'total' ], 124 );
+        self.assertEqual ( s.datas [ 'total' ], 124 );
 
 
                     

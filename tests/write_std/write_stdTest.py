@@ -19,7 +19,7 @@ class write_stdTest ( unittest.TestCase ):
                 'random-line-3'
             ] );
 
-            self.assertEquals ( w_stdout.call_count, 3 );
+            self.assertEqual ( w_stdout.call_count, 3 );
             w_stdout.assert_any_call ( "random-line-1\n" );
             w_stdout.assert_any_call ( "random-line-2\n" );
             w_stdout.assert_any_call ( "random-line-3\n" );

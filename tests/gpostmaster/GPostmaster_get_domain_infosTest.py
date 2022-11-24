@@ -27,9 +27,9 @@ class GPostmaster_get_domain_infosTest ( unittest.TestCase ):
                         );
 
                         self.assertTrue ( ret [ 'state' ] );
-                        self.assertEquals ( ret [ 'result' ], { 'random-key': 'random-datas-cleaned', 'domain': 'random-domain', 'date': 'random-input-date' } );
-                        self.assertEquals ( ret [ 'domain' ], 'random-domain' );
-                        self.assertEquals ( ret [ 'date' ], 'random-input-date' );
+                        self.assertEqual ( ret [ 'result' ], { 'random-key': 'random-datas-cleaned', 'domain': 'random-domain', 'date': 'random-input-date' } );
+                        self.assertEqual ( ret [ 'domain' ], 'random-domain' );
+                        self.assertEqual ( ret [ 'date' ], 'random-input-date' );
                         get_info.assert_called_with (
                             domain = 'random-domain',
                             input_date = 'random-input-date'
@@ -38,7 +38,7 @@ class GPostmaster_get_domain_infosTest ( unittest.TestCase ):
                             key = 'random-domain-random-input-date',
                             datas = 'random-domain-info'
                         );
-                        self.assertEquals ( print_stats.call_count, 1 );
+                        self.assertEqual ( print_stats.call_count, 1 );
 
                         
     def test_get_info_return_false ( self ):
@@ -56,15 +56,15 @@ class GPostmaster_get_domain_infosTest ( unittest.TestCase ):
                         );
 
                         self.assertFalse ( ret [ 'state' ] );
-                        self.assertEquals ( ret [ 'domain' ], 'random-domain' );
-                        self.assertEquals ( ret [ 'date' ], 'random-input-date' );
+                        self.assertEqual ( ret [ 'domain' ], 'random-domain' );
+                        self.assertEqual ( ret [ 'date' ], 'random-input-date' );
                         
                         get_info.assert_called_with (
                             domain = 'random-domain',
                             input_date = 'random-input-date'
                         );
                         clean_info.assert_not_called ();
-                        self.assertEquals ( print_stats.call_count, 1 );
+                        self.assertEqual ( print_stats.call_count, 1 );
 
                         
     def test_do_not_print_sats ( self ):
@@ -83,9 +83,9 @@ class GPostmaster_get_domain_infosTest ( unittest.TestCase ):
                         );
                         
                         self.assertTrue ( ret [ 'state' ] );
-                        self.assertEquals ( ret [ 'result' ], { 'random-key': 'random-datas-cleaned', 'domain': 'random-domain', 'date': 'random-input-date' } );
-                        self.assertEquals ( ret [ 'domain' ], 'random-domain' );
-                        self.assertEquals ( ret [ 'date' ], 'random-input-date' );
+                        self.assertEqual ( ret [ 'result' ], { 'random-key': 'random-datas-cleaned', 'domain': 'random-domain', 'date': 'random-input-date' } );
+                        self.assertEqual ( ret [ 'domain' ], 'random-domain' );
+                        self.assertEqual ( ret [ 'date' ], 'random-input-date' );
                         get_info.assert_called_with (
                             domain = 'random-domain',
                             input_date = 'random-input-date'

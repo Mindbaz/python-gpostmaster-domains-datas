@@ -24,8 +24,8 @@ class GPostmaster_constructorTest ( unittest.TestCase ):
             self.assertFalse ( w.verbose );
             self.assertTrue ( type ( w._uri_tpl ) is str );
             self.assertTrue ( len ( w._uri_tpl ) > 0 );
-            self.assertEquals ( w._domains, [] );
-            self.assertEquals ( w._pool_size, 2 );
+            self.assertEqual ( w._domains, [] );
+            self.assertEqual ( w._pool_size, 2 );
 
                 
     def test_pool_size ( self ):
@@ -34,7 +34,7 @@ class GPostmaster_constructorTest ( unittest.TestCase ):
                 token = 'random-token',
                 pool_size = '951'
             );
-            self.assertEquals ( w._pool_size, 951 );
+            self.assertEqual ( w._pool_size, 951 );
               
                 
     def test_verbose ( self ):

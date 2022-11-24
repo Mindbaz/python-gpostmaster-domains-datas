@@ -23,7 +23,7 @@ class Stats_add_err_httpTest ( unittest.TestCase ):
                 domain = 'random-domain'
             );
             
-            self.assertEquals ( add_err.call_count, 1 );
+            self.assertEqual ( add_err.call_count, 1 );
             self.assertTrue ( 'random-code' in s.datas [ 'err_http' ] );
             self.assertTrue ( s.datas [ 'err_http' ] [ 'random-code' ] [ 'count' ], 1 );
             self.assertTrue ( s.datas [ 'err_http' ] [ 'random-code' ] [ 'domains' ], [ 'random-domain' ] );
@@ -43,8 +43,8 @@ class Stats_add_err_httpTest ( unittest.TestCase ):
                 domain = 'random-domain'
             );
             
-            self.assertEquals ( add_err.call_count, 1 );
-            self.assertEquals ( s.datas [ 'err_http' ], {
+            self.assertEqual ( add_err.call_count, 1 );
+            self.assertEqual ( s.datas [ 'err_http' ], {
                 'another-code': { 'count': 12, 'domains': [ 'another-domain-1', 'another-domain-2' ], 'message': 'another-message' },
                 'random-code': { 'count': 1, 'domains': [ 'random-domain' ], 'message': 'random-err' }
             } );
@@ -63,10 +63,10 @@ class Stats_add_err_httpTest ( unittest.TestCase ):
                 domain = 'random-domain-3'
             );
             
-            self.assertEquals ( add_err.call_count, 1 );
-            self.assertEquals ( s.datas [ 'err_http' ] [ 'random-code' ] [ 'count' ], 13 );
-            self.assertEquals ( s.datas [ 'err_http' ] [ 'random-code' ] [ 'domains' ], [ 'random-domain-1', 'random-domain-2', 'random-domain-3' ] );
-            self.assertEquals ( s.datas [ 'err_http' ] [ 'random-code' ] [ 'message' ], 'random-message' );
+            self.assertEqual ( add_err.call_count, 1 );
+            self.assertEqual ( s.datas [ 'err_http' ] [ 'random-code' ] [ 'count' ], 13 );
+            self.assertEqual ( s.datas [ 'err_http' ] [ 'random-code' ] [ 'domains' ], [ 'random-domain-1', 'random-domain-2', 'random-domain-3' ] );
+            self.assertEqual ( s.datas [ 'err_http' ] [ 'random-code' ] [ 'message' ], 'random-message' );
             
             
             

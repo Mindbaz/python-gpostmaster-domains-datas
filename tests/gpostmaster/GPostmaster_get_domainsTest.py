@@ -27,8 +27,8 @@ class GPostmaster_get_domainsTest ( unittest.TestCase ):
 
                     w.get_domains ();
                     
-                    self.assertEquals ( w._domains, [ 'random-domain-1', 'random-domain-3' ] );
-                    self.assertEquals ( gpt_get_domains.call_count, 1 );
+                    self.assertEqual ( w._domains, [ 'random-domain-1', 'random-domain-3' ] );
+                    self.assertEqual ( gpt_get_domains.call_count, 1 );
                     write_std.asser_called_with ( [
                         'Download 2 domain(s) from GPT'
                     ] );
@@ -45,8 +45,8 @@ class GPostmaster_get_domainsTest ( unittest.TestCase ):
 
                     w.get_domains ();
                     
-                    self.assertEquals ( w._domains, [] );
-                    self.assertEquals ( gpt_get_domains.call_count, 1 );
+                    self.assertEqual ( w._domains, [] );
+                    self.assertEqual ( gpt_get_domains.call_count, 1 );
                     write_std.asser_called_with ( [
                         'Download 0 domain(s) from GPT'
                     ] );
