@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Google Postmaster Domains Datas &mdash; Google Postmaster Domains Datas 0.0.1 documentation</title>
+  <title>Google Postmaster Domains Datas &mdash; Google Postmaster Domains Datas 0.0.2 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -12,9 +12,6 @@
   <![endif]-->
   
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -27,11 +24,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="#" class="icon icon-home"> Google Postmaster Domains Datas
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Google Postmaster Domains Datas
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -111,7 +112,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home"></a></li>
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Google Postmaster Domains Datas</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
@@ -133,7 +134,7 @@
 <span class="sig-name descname"><span class="pre">_uri_tpl</span></span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._uri_tpl" title="Permalink to this definition"></a></dt>
 <dd><p>Template to create an uri to get domain infos</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>string</p>
 </dd>
 </dl>
@@ -144,7 +145,7 @@
 <span class="sig-name descname"><span class="pre">_domains</span></span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._domains" title="Permalink to this definition"></a></dt>
 <dd><p>All domains download from server</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>string[]</p>
 </dd>
 </dl>
@@ -155,7 +156,7 @@
 <span class="sig-name descname"><span class="pre">_service</span></span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._service" title="Permalink to this definition"></a></dt>
 <dd><p>Connector to GPT</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>googleapiclient.discovery.build</p>
 </dd>
 </dl>
@@ -166,7 +167,7 @@
 <span class="sig-name descname"><span class="pre">_parser</span></span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._parser" title="Permalink to this definition"></a></dt>
 <dd><p>Connector to datas cleaner</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="#googlepostmasterapi.datas.FlatDatas" title="googlepostmasterapi.datas.FlatDatas">FlatDatas</a></p>
 </dd>
 </dl>
@@ -177,7 +178,7 @@
 <span class="sig-name descname"><span class="pre">_stats</span></span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._stats" title="Permalink to this definition"></a></dt>
 <dd><p>Connector to statistiques datas</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="#googlepostmasterapi.stats.Stats" title="googlepostmasterapi.stats.Stats">Stats</a></p>
 </dd>
 </dl>
@@ -188,7 +189,7 @@
 <span class="sig-name descname"><span class="pre">_pool_size</span></span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._pool_size" title="Permalink to this definition"></a></dt>
 <dd><p>Pool size to calls</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>int</p>
 </dd>
 </dl>
@@ -199,7 +200,7 @@
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pool_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Default constructor</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>token</strong> (<em>string</em>) – Absolute file path to GPT token</p></li>
 <li><p><strong>verbose</strong> (<em>bool</em>) – Verbose mode. Default to False</p></li>
@@ -213,16 +214,16 @@
 <span class="sig-name descname"><span class="pre">_clean_domain_infos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datas</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._clean_domain_infos" title="Permalink to this definition"></a></dt>
 <dd><p>Clean domain infos</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>key</strong> (<em>string</em>) – Key to identify datas on cleaner</p></li>
 <li><p><strong>datas</strong> (<em>dict</em>) – Domain infos to clean</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Cleaned datas</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
@@ -233,13 +234,13 @@
 <span class="sig-name descname"><span class="pre">_clean_pool_returns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datas</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._clean_pool_returns" title="Permalink to this definition"></a></dt>
 <dd><p>Clean result from pool map returns : remove all state==false</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>datas</strong> (<em>dict</em><em>[</em><em>]</em>) – List of dict from pool map</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>List of dict from pool map with only state==true</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>dict[]</p>
 </dd>
 </dl>
@@ -250,7 +251,7 @@
 <span class="sig-name descname"><span class="pre">_create_domain_uri</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._create_domain_uri" title="Permalink to this definition"></a></dt>
 <dd><p>Create URI to a domain to query</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>domain</strong> (<em>string</em>) – Domain to query</p></li>
 <li><p><strong>input_date</strong> (<em>string</em>) – Date to query, format : YYYYMMDD</p></li>
@@ -264,13 +265,13 @@
 <span class="sig-name descname"><span class="pre">_create_pool_datas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._create_pool_datas" title="Permalink to this definition"></a></dt>
 <dd><p>Create datas to map call on pool with all domains</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>input_date</strong> (<em>string</em>) – Date to query</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>List of dict with domain&amp;input_date</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>dict[]</p>
 </dd>
 </dl>
@@ -281,13 +282,13 @@
 <span class="sig-name descname"><span class="pre">_get_domain_infos_pool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datas</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._get_domain_infos_pool" title="Permalink to this definition"></a></dt>
 <dd><p>Abstract call to get_domain_infos from pool with datas as dict</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>datas</strong> (<em>dict</em>) – Values domain/input_date to send to get_domain_infos</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Result from get_domain_infos calls</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
@@ -298,16 +299,16 @@
 <span class="sig-name descname"><span class="pre">_gpt_get_domain_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._gpt_get_domain_info" title="Permalink to this definition"></a></dt>
 <dd><p>Call GPT to get all infos to a domain</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>domain</strong> (<em>string</em>) – Domain to query</p></li>
 <li><p><strong>input_date</strong> (<em>string</em>) – Date to query, format : YYYYMMDD</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Process state &amp; result</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
@@ -318,10 +319,10 @@
 <span class="sig-name descname"><span class="pre">_gpt_get_domains</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._gpt_get_domains" title="Permalink to this definition"></a></dt>
 <dd><p>Call GPT to get all domains</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>List of dict with all domains, format : [ { ‘name’: …, ‘createTime’: …, ‘permission’: … } ]</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>list</p>
 </dd>
 </dl>
@@ -338,7 +339,7 @@
 <span class="sig-name descname"><span class="pre">_init_resources</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._init_resources" title="Permalink to this definition"></a></dt>
 <dd><p>Init resources used by system : init service / parser / stats</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>token</strong> (<em>string</em>) – Absolute file path to GPT token</p>
 </dd>
 </dl>
@@ -349,7 +350,7 @@
 <span class="sig-name descname"><span class="pre">_init_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._init_service" title="Permalink to this definition"></a></dt>
 <dd><p>Init service connector</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>token</strong> (<em>string</em>) – Absolute file path to GPT token</p>
 </dd>
 </dl>
@@ -366,7 +367,7 @@
 <span class="sig-name descname"><span class="pre">_load_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster._load_token" title="Permalink to this definition"></a></dt>
 <dd><p>Load GPT token</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>token</strong> (<em>string</em>) – Absolute file path to GPT token</p>
 </dd>
 </dl>
@@ -383,13 +384,13 @@
 <span class="sig-name descname"><span class="pre">get_all_domains_infos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster.get_all_domains_infos" title="Permalink to this definition"></a></dt>
 <dd><p>Call GPT on all available domains</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>input_date</strong> (<em>string</em>) – Date to query, format : YYYYMMDD</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>All domain infos</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list</p>
 </dd>
 </dl>
@@ -400,17 +401,17 @@
 <span class="sig-name descname"><span class="pre">get_domain_infos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_stats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.gpt.GPostmaster.get_domain_infos" title="Permalink to this definition"></a></dt>
 <dd><p>Get infos to a domain</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>domain</strong> (<em>string</em>) – Domain to query</p></li>
 <li><p><strong>input_date</strong> (<em>string</em>) – Date to query, format : YYYYMMDD</p></li>
 <li><p><strong>print_stats</strong> (<em>bool</em>) – True to display stats of the call. Defaut : True</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Process state &amp; domain infos</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
@@ -439,7 +440,7 @@
 <span class="sig-name descname"><span class="pre">datas</span></span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas.datas" title="Permalink to this definition"></a></dt>
 <dd><p>Datas cleaned</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
@@ -450,7 +451,7 @@
 <span class="sig-name descname"><span class="pre">_datas_tpl</span></span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._datas_tpl" title="Permalink to this definition"></a></dt>
 <dd><p>Template to clean datas</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
@@ -461,7 +462,7 @@
 <span class="sig-name descname"><span class="pre">dict_reputation</span></span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas.dict_reputation" title="Permalink to this definition"></a></dt>
 <dd><p>Assoc to translate EN reputation to int</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
@@ -478,16 +479,16 @@
 <span class="sig-name descname"><span class="pre">_parse_crypted_inbound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._parse_crypted_inbound" title="Permalink to this definition"></a></dt>
 <dd><p>Clean part of key : inboundEncryptionRatio</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>key</strong> (<em>string</em>) – Key to identify datas</p></li>
 <li><p><strong>value</strong> (<em>float</em>) – Inbound encrypted ratio to convert to percent</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>False if no value to convert. True otherwise</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
@@ -498,16 +499,16 @@
 <span class="sig-name descname"><span class="pre">_parse_delivery_err</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._parse_delivery_err" title="Permalink to this definition"></a></dt>
 <dd><p>Clean part of key : deliveryErrors</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>key</strong> (<em>string</em>) – Key to identify datas</p></li>
 <li><p><strong>value</strong> (<em>dict</em><em>[</em><em>]</em>) – Array with all delivery error ratio to convert to percent</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>False if no value to convert. True otherwise</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
@@ -518,16 +519,16 @@
 <span class="sig-name descname"><span class="pre">_parse_domain_reputations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._parse_domain_reputations" title="Permalink to this definition"></a></dt>
 <dd><p>Clean part of key : domainReputation</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>key</strong> (<em>string</em>) – Key to identify datas</p></li>
 <li><p><strong>value</strong> (<em>string</em>) – Domain reputation</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>False if no value to convert. True otherwise</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
@@ -535,19 +536,19 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="googlepostmasterapi.datas.FlatDatas._parse_feed_back_loop">
-<span class="sig-name descname"><span class="pre">_parse_feed_back_loop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._parse_feed_back_loop" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">_parse_feed_back_loop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._parse_feed_back_loop" title="Permalink to this definition"></a></dt>
 <dd><p>Clean part of key : spammyFeedbackLoops</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>key</strong> (<em>string</em>) – Key to identify datas</p></li>
 <li><p><strong>value</strong> (<em>dict</em><em>[</em><em>]</em>) – Array with all feedback loop splitted by uid</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>False if no value to convert. True otherwise</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
@@ -558,16 +559,16 @@
 <span class="sig-name descname"><span class="pre">_parse_ips_reputations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._parse_ips_reputations" title="Permalink to this definition"></a></dt>
 <dd><p>Clean part of key : ipReputations</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>key</strong> (<em>string</em>) – Key to identify datas</p></li>
 <li><p><strong>value</strong> (<em>dict</em><em>[</em><em>]</em>) – Array with all four reputations : bad/low/medium/high</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>False if no value to convert. True otherwise</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
@@ -578,7 +579,7 @@
 <span class="sig-name descname"><span class="pre">_parse_use_auth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._parse_use_auth" title="Permalink to this definition"></a></dt>
 <dd><p>Clean part of keys : dkimSuccessRatio / spfSuccessRatio / dmarcSuccessRatio</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>key</strong> (<em>string</em>) – Key to identify datas</p></li>
 <li><p><strong>dkim</strong> (<em>float</em>) – DKIM ratio to convert to percent. Optional</p></li>
@@ -586,10 +587,10 @@
 <li><p><strong>dmarc</strong> (<em>float</em>) – DMARC ratio to convert to percent. Optional</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if at leat one the three key exists. False otherwise</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
@@ -600,16 +601,16 @@
 <span class="sig-name descname"><span class="pre">_parse_user_report_spam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas._parse_user_report_spam" title="Permalink to this definition"></a></dt>
 <dd><p>Clean part of key : userReportedSpamRatio</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>key</strong> (<em>string</em>) – Key to identify datas</p></li>
 <li><p><strong>value</strong> (<em>float</em>) – Report ratio to convrt to percent</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>False if no value to convert. True otherwise</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
@@ -620,16 +621,16 @@
 <span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datas</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.datas.FlatDatas.parse" title="Permalink to this definition"></a></dt>
 <dd><p>Parse datas from GPT to a flatern version with all values</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>key</strong> (<em>string</em>) – Key to identify datas</p></li>
 <li><p><strong>datas</strong> (<em>dict</em>) – Datas from GPT to clean</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Cleaned datas from GPT</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
@@ -646,7 +647,7 @@
 <span class="sig-name descname"><span class="pre">datas</span></span><a class="headerlink" href="#googlepostmasterapi.stats.Stats.datas" title="Permalink to this definition"></a></dt>
 <dd><p>Statistics from domains infos download</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
@@ -669,7 +670,7 @@
 <span class="sig-name descname"><span class="pre">add_err_http</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">err</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.stats.Stats.add_err_http" title="Permalink to this definition"></a></dt>
 <dd><p>Increment counters : total + err &amp; add domain to http error datas</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>code</strong> (<em>int</em>) – Http code</p></li>
 <li><p><strong>err</strong> (<em>string</em>) – Http error message</p></li>
@@ -696,10 +697,10 @@
 <span class="sig-name descname"><span class="pre">print_stats</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.stats.Stats.print_stats" title="Permalink to this definition"></a></dt>
 <dd><p>Display calls statistics</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>False if nothing to display. True otherwise</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>bool</p>
 </dd>
 </dl>
@@ -712,7 +713,7 @@
 <span class="sig-prename descclassname"><span class="pre">googlepostmasterapi.utils.</span></span><span class="sig-name descname"><span class="pre">write_std</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googlepostmasterapi.utils.write_std" title="Permalink to this definition"></a></dt>
 <dd><p>Quick write on stdout</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>logs</strong> (<em>string</em><em>[</em><em>]</em>) – List of log to print on stdout</p>
 </dd>
 </dl>
