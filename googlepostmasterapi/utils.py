@@ -25,3 +25,20 @@ def write_std ( logs ):
     """
     for log in logs:
         sys.stdout.write ( "{}\n".format ( log ) );
+
+
+def recursive_call ( method, *args, **kargs ):
+    """Method to abstract recursive call
+    
+    Arguments:
+        method (string): Mehtod name to call on current instance
+        args (mixed()): Arguments to send to method
+        kargs (dict): Keyword arguments to send to method
+    
+    Returns:
+        mixed: Method returns
+    """
+    return method (
+        *args,
+        **kargs
+    );

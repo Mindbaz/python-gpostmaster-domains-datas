@@ -27,7 +27,7 @@ from multiprocessing.managers import BaseManager;
 sys.path.insert ( 0, os.path.dirname ( os.path.dirname ( os.path.abspath ( __file__ ) ) ) );
 from googlepostmasterapi.datas import FlatDatas;
 from googlepostmasterapi.stats import Stats;
-from googlepostmasterapi.utils import write_std;
+from googlepostmasterapi.utils import recursive_call, write_std;
 
 class GPostmaster ( object ):
     """Download datas from Google postmaster tools
@@ -118,13 +118,29 @@ class GPostmaster ( object ):
         );
     
     
-    def _gpt_get_domains ( self ):
-        """Call GPT to get all domains
+    def _gpt_get_domains ( self, next_page = None ):
+        """Call GPT to get all domains. Recursive call on pagination
+        
+        Arguments:
+            next_page (str): Token to get next page of domains. Default : None
         
         Returns:
             list: List of dict with all domains, format : [ { 'name': ..., 'createTime': ..., 'permission': ... } ]
         """
-        return self._service.domains ().list ().execute ();
+        """All domains"""
+        ret = self._service.domains ().list (
+            pageToken = next_page
+        ).execute ();
+        
+        if ( 'nextPageToken' in ret ):
+            """Domains from next page. Recursive call"""
+            tmp = recursive_call (
+                self._gpt_get_domains,
+                next_page = ret [ 'nextPageToken' ]
+            );
+            ret [ 'domains' ] += tmp [ 'domains' ];
+        
+        return ret;
     
     
     def get_domains ( self ):
